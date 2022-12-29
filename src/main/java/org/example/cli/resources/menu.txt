@@ -1,0 +1,7 @@
+0 - Quittez
+1 - Achat de pneus
+2 - Installation des pneus
+3 - Achat et installation des pneus
+4 - Statistique de vente
+5 - Détails de la dimension du pneu
+6 - Inventaire de pneu
