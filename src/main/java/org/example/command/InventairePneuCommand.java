@@ -1,6 +1,6 @@
 package org.example.command;
 
-public class InventairePneuCommand implements Command {
+public class InventairePneuCommand extends CommandBase {
     @Override
     public String getCode() {
         return "6";

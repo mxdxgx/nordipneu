@@ -1,6 +1,6 @@
 package org.example.command;
 
-public class StatisticVenteCommand implements Command {
+public class StatisticVenteCommand extends CommandBase {
     @Override
     public String getCode() {
         return "4";

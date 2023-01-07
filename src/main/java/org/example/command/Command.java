@@ -1,11 +1,13 @@
 package org.example.command;
 
+import java.io.IOException;
+
 public interface Command {
-    public Command next = null;
+    Command next = null;
 
     String getCode();
 
-    void execute();
+    void execute() throws IOException;
 
     Command getNext();
 

@@ -1,6 +1,6 @@
 package org.example.command;
 
-public class ExitCommand implements Command {
+public class ExitCommand extends CommandBase {
     @Override
     public String getCode() {
         return "0";

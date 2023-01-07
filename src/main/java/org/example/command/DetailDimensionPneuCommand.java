@@ -1,6 +1,6 @@
 package org.example.command;
 
-public class DetailDimensionPneuCommand implements Command {
+public class DetailDimensionPneuCommand extends CommandBase {
     @Override
     public String getCode() {
         return "5";

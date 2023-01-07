@@ -2,7 +2,10 @@ package org.example.command;
 
 import lombok.Setter;
 
+import java.io.IOException;
+
 public class CommandBase implements Command {
+
     @Setter
     private Command next;
 
@@ -12,7 +15,7 @@ public class CommandBase implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute() throws IOException {
 
     }
 
@@ -25,4 +28,5 @@ public class CommandBase implements Command {
     public boolean hasNext() {
         return this.next != null;
     }
+
 }

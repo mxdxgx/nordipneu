@@ -12,7 +12,10 @@ public class LigneFacture {
     private float originalAmount;
 
     public void applyDiscount(DiscountProportion term) {
-        this.setAmountSaved(this.getOriginalAmount() - this.getOriginalAmount() * term.getPercentage());
+
+        float savedAmount = this.getOriginalAmount() - this.getOriginalAmount() * term.getPercentage();
+        this.setAmountSaved(savedAmount);
+
         float amountAfterDiscount = this.getOriginalAmount() - this.getAmountSaved();
         this.setAmountAfterDiscount(amountAfterDiscount);
     }
