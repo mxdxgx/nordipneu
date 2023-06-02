@@ -22,6 +22,11 @@ public class UserPrinter {
         this.bannerReader = new BufferedReader(new FileReader(BANNER_FILE_PATH));
     }
 
+    public UserPrinter(String filePath, String bannerPath) throws FileNotFoundException {
+        this.fileReader = new BufferedReader(new FileReader(filePath));
+        this.bannerReader = new BufferedReader(new FileReader(bannerPath));
+    }
+
     public void printBanner() throws IOException {
         String line;
         while ((line = this.bannerReader.readLine()) != null) {

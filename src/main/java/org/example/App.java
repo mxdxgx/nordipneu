@@ -9,7 +9,11 @@ import java.util.logging.Logger;
 public class App {
     public static void main(String[] args) {
         try {
-            new Shell().run();
+            new Shell(
+                        "src/main/java/org/example/cli/resources/menu.txt",
+                        "src/main/java/org/example/cli/resources" + "/banner.txt",
+                        "mainMenu")
+                    .run();
         } catch (IOException e) {
             Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage());
         }
