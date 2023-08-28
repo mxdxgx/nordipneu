@@ -25,12 +25,6 @@ public class SellPneuCommand extends CommandBase {
 
     @Override
     public void execute() throws IOException {
-//
-//        Shell shell = new Shell("src/main/java/org/example/cli/resources/ventePneumenu.txt", "src/main/java/org" +
-//                "/example/cli" +
-//                "/resources" + "/banner.txt", "ventePneuMenu");
-//        shell.run();
-
         String currentUserInput;
         boolean canContinue = true;
         try {

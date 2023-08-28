@@ -18,6 +18,7 @@ public class Shell {
     private final String key;
     private final BufferedReader userReader = new BufferedReader(new InputStreamReader(System.in));
     private final CommandMap commandMap;
+    private final CommandFactory factory = CommandFactory.getInstance();
     private final UserPrinter printer;
     private String currentUserInput;
     private boolean loopThrought = true;
@@ -26,7 +27,7 @@ public class Shell {
         this.key = key;
         this.commandMap = new CommandMap(key, () -> {
             try {
-                return CommandFactory.getCommandListFromKey(key);
+                return this.factory.getCommandListFromKey(key);
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }

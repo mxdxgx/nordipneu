@@ -5,7 +5,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandFactory {
-    public static Map<String, Command> getCommandListFromKey(String key) throws FileNotFoundException {
+    private static volatile CommandFactory instance;
+
+    public static CommandFactory getInstance() {
+        synchronized (CommandFactory.class) {
+            if (instance == null) {
+                instance = new CommandFactory();
+            }
+        }
+        return instance;
+    }
+
+    public Map<String, Command> getCommandListFromKey(String key) throws FileNotFoundException {
         if (key.equals("mainMenu")) {
             Map<String, Command> commands = new HashMap<>();
             commands.put("0", new ExitCommand());
