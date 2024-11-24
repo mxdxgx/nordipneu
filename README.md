@@ -34,4 +34,5 @@ Pour installer NordiPneu, suivez ces étapes :
 Pour exécuter NordiPneu, utilisez la commande suivante :
 
 ```bash
-mvn exec:java -Dexec.mainClass="org.example.MainClass"
+mvn exec:java -Dexec.mainClass=org.example.App
+"
