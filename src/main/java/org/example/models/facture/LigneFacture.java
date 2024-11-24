@@ -7,16 +7,17 @@ import org.example.models.modifiers.DiscountProportion;
 @Getter
 @Setter
 public class LigneFacture {
-    private float amountSaved;
-    private float amountAfterDiscount;
-    private float originalAmount;
 
-    public void applyDiscount(DiscountProportion term) {
+  private float amountSaved;
+  private float amountAfterDiscount;
+  private float originalAmount;
 
-        float savedAmount = this.getOriginalAmount() - this.getOriginalAmount() * term.getPercentage();
-        this.setAmountSaved(savedAmount);
+  public void applyDiscount(DiscountProportion term) {
 
-        float amountAfterDiscount = this.getOriginalAmount() - this.getAmountSaved();
-        this.setAmountAfterDiscount(amountAfterDiscount);
-    }
+    float savedAmount = this.getOriginalAmount() * term.getPercentage();
+    this.setAmountSaved(savedAmount);
+
+    float amountAfterDiscount = this.getOriginalAmount() - this.getAmountSaved();
+    this.setAmountAfterDiscount(amountAfterDiscount);
+  }
 }

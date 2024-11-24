@@ -3,13 +3,14 @@ package org.example.command;
 import java.io.IOException;
 
 public interface Command {
-    Command next = null;
 
-    String getCode();
+  Command next = null;
 
-    void execute() throws IOException;
+  String getCode();
 
-    Command getNext();
+  void execute() throws IOException;
 
-    boolean hasNext();
+  Command getNext();
+
+  boolean hasNext();
 }

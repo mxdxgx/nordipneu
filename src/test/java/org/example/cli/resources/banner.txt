@@ -1,0 +1,4 @@
+Available commands:
+  help  Display help information
+  quit  Quit the application
+  test  Test command

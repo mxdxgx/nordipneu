@@ -6,5 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DiscountProportion {
-    private float percentage;
+
+  private float percentage;
 }
