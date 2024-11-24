@@ -46,6 +46,11 @@ class InstallationPneuCommandTest {
       public boolean hasNext() {
         return false;
       }
+
+      @Override
+      public boolean isDisableNext() {
+        return false;
+      }
     };
     InstallationPneuCommand command = new InstallationPneuCommand(nextCommand);
     assertEquals(nextCommand, command.getNext());

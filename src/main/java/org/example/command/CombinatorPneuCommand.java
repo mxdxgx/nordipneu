@@ -31,7 +31,7 @@ public class CombinatorPneuCommand extends CommandBase {
           } else {
             System.out.println("Nombre de pneus : " + numberOfPneus);
             // TODO: Add number of pneus to cart
-            return;
+            canContinue = false;
           }
         }
       }

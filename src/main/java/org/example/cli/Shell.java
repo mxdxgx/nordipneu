@@ -47,7 +47,7 @@ public class Shell {
             .get(this.currentUserInput);
         if (currentTask != null) {
           currentTask.execute();
-          while (currentTask.hasNext()) {
+          while (currentTask.hasNext() && !currentTask.isDisableNext()) {
             currentTask = currentTask.getNext();
             currentTask.execute();
           }

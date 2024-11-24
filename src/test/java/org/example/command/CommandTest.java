@@ -28,6 +28,11 @@ class CommandTest {
       public boolean hasNext() {
         return false;
       }
+
+      @Override
+      public boolean isDisableNext() {
+        return false;
+      }
     };
     assertNull(command.getNext());
     assertFalse(command.hasNext());

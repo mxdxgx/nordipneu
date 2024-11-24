@@ -25,6 +25,7 @@ public class SellPneuCommand extends CommandBase {
 
   @Override
   public void execute() throws IOException {
+    this.setDisableNext(false);
     String currentUserInput;
     boolean canContinue = true;
     try {
@@ -37,8 +38,8 @@ public class SellPneuCommand extends CommandBase {
           canContinue = false;
           System.out.println("Une erreur est survenue : Retour au menu précédent...");
         } else if (currentUserInput.equals("q")) {
-          canContinue = false;
           System.out.println("Retour au menu précédent...");
+          this.setDisableNext(true);
           return;
         } else {
           boolean matchingPattern = Pattern.compile("[0-9]{3}/[0-9]{2}[R|B]/[0-9]{2}[A-Z]")
@@ -50,7 +51,7 @@ public class SellPneuCommand extends CommandBase {
             Pneu pneuVendu = Pneu.fromUserInput(currentUserInput);
             System.out.println("Pneu vendu : " + pneuVendu);
             // TODO: Add item to cart
-            return;
+            canContinue = false;
           }
         }
       }

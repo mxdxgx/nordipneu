@@ -1,10 +1,14 @@
 package org.example.command;
 
 import java.io.IOException;
+import lombok.Getter;
 import lombok.Setter;
 
 public class CommandBase implements Command {
 
+  @Getter
+  @Setter
+  private boolean disableNext = false;
   @Setter
   private Command next;
 
@@ -15,7 +19,6 @@ public class CommandBase implements Command {
 
   @Override
   public void execute() throws IOException {
-
   }
 
   @Override

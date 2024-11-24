@@ -36,6 +36,11 @@ class CommandMapTest {
         public boolean hasNext() {
           return false;
         }
+
+        @Override
+        public boolean isDisableNext() {
+          return false;
+        }
       });
       return commands;
     };

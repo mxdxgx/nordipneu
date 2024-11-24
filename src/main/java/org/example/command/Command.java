@@ -13,4 +13,6 @@ public interface Command {
   Command getNext();
 
   boolean hasNext();
+
+  boolean isDisableNext();
 }
