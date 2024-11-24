@@ -4,12 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import lombok.NoArgsConstructor;
-import org.example.cli.Shell;
 
 @NoArgsConstructor
 public class CombinatorPneuCommand extends CommandBase {
-
-  public Shell shell;
 
   public CombinatorPneuCommand(Command next) {
     super.setNext(next);
