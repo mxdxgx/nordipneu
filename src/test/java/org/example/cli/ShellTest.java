@@ -22,7 +22,7 @@ class ShellTest {
     System.setIn(inContent);
     shell = new Shell(
         "src/test/java/org/example/cli/resources/menu.txt",
-        "src/test/java/org/example/cli/resources" + "/banner.txt",
+        "src/test/java/org/example/cli/resources/banner.txt",
         "mainMenu");
 
   }

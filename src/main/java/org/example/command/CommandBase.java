@@ -4,12 +4,11 @@ import java.io.IOException;
 import lombok.Getter;
 import lombok.Setter;
 
+@Setter
 public class CommandBase implements Command {
 
   @Getter
-  @Setter
   private boolean disableNext = false;
-  @Setter
   private Command next;
 
   @Override
